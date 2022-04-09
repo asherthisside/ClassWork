@@ -1,0 +1,4 @@
+{
+  "api_cred": {"url": "https://fsm-api-service.azurewebsites.net/rest/d/service/order1/","token": "F702E6B0-7E3D-4688-9564-333A5493B1FD"},
+  "api_custumer":{"url":"https://fsm-api-service.azurewebsites.net/rest/c/customer/customer/", "token":"ac8f7c69-9d6f-4ac1-a22f-05156e0390bc"}
+}

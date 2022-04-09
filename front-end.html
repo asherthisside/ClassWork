@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI - Django</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #divi1 {
+            /* background: url('../5pmBatch/images/about2.jpg'); */
+            background: springgreen;
+            height: 500px;
+            width: 500px;
+            padding: 20px;
+            /* color: red; */
+            box-sizing: border-box;
+            text-align: center;
+            border: 2px dashed green;
+            border: none;
+            /* text-decoration: underline; */
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+        }
+
+        #divi1 h2 {
+            display: block;
+            border: 2px solid;
+            /* visibility: hidden; */
+            display: none;
+        }
+
+        #divi2 {
+            background: linear-gradient(to top right, dodgerblue, hotpink);
+            height: 500px;
+            width: 500px;
+            /* This is now a flex-container */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .box {
+            width: 80px;
+            /* height: 80px; */
+            border: solid;
+            margin: 5px;
+            /* These are now flex-items */
+
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: yellowgreen;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 50px;
+            margin-left: 10px;
+        }
+
+        nav {
+            margin-right: 10px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 10px;
+            background-color: green;
+            margin: 5px;
+            width: 70px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Headings, Paragraphs, Lists, Tables, Forms, Audio, Video, iframe -->
+    <!-- <div id="divi1">
+        <h1>Introduction</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis at error harum, dolore minus ipsa aliquam perspiciatis saepe voluptatibus sint esse minima porro, tempore blanditiis ad aliquid nam eaque eligendi fugit id voluptatum vero nihil velit. Exercitationem at debitis nemo perspiciatis ex minima cum dolorum atque qui praesentium earum delectus sequi nihil nulla sint hic quod aliquam quasi voluptate rem rerum labore culpa, similique porro. Enim est architecto consectetur incidunt magni saepe ea tempore ipsa quibusdam impedit, in dicta optio maiores dolore adipisci qui soluta quidem quis ex. Cumque maiores libero, praesentium non eos deserunt sit magni molestiae assumenda placeat!</p>
+        <h2>Heading</h2>
+        <h2>Heading</h2>
+        <a href=""> <button> Click here </button></a>
+        <button>Button 2</button>
+    </div> -->
+
+    <!-- <div id="divi2">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div> -->
+
+    <header>
+        <div class="logo">ASHER - X</div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Products</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

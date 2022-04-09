@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Enter details here</h1>
+    <form action="dashboard" method="post">
+        {% csrf_token %}
+        <label for="">Enter name :</label> <br>
+        <input type="text" name="username" id=""> <br> <br>
+
+        <label for="">Enter Password :</label> <br>
+        <input type="text" name="password" id=""> <br> <br>
+
+        <input type="submit" value="Submit"> 
+    </form>
+</body>
+</html>

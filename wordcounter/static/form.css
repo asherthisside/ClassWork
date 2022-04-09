@@ -1,0 +1,16 @@
+h1 {
+    background-image: linear-gradient(salmon, powderblue);
+    text-align: center;
+}
+
+textarea {
+    background-color: aqua;
+}
+
+input[type=submit] {
+    padding: 15px 30px;
+    background-color: red;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5em;
+}

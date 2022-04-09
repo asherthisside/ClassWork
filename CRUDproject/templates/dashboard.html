@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.15em;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Details are : </h1>
+    <a href="{% url 'home' %}"><button style="background-color: rgb(52, 52, 255);">Add New</button></a> <br>
+    <br> <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+        {% for i in userdetails %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.department}}</td>
+            <td>{{i.salary}}</td>
+            <td>
+                <a href="/edit/{{i.id}}"><button style="background-color: rgb(52, 255, 52);">Update</button></a>
+                <a href="/delete/{{i.id}}"><button style="background-color: rgb(255, 52, 52);">Delete</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

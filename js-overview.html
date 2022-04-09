@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="new.js"></script>
+    <script></script>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <hr>
+    <button id="btn">Click</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ab dolore, temporibus a reprehenderit explicabo eum cumque beatae molestiae aliquid assumenda voluptates veritatis amet laudantium expedita dolorum repellendus deserunt enim autem commodi, eius nesciunt quibusdam quia? Quos excepturi eos accusamus repudiandae sunt ullam quisquam nisi earum doloremque officiis, atque consectetur ipsa placeat. Minima optio accusamus expedita in ex? Aperiam, aspernatur! Doloremque necessitatibus corrupti quidem, totam, error, ab sint debitis modi autem nesciunt sequi quia nisi nostrum dicta officiis distinctio? Blanditiis assumenda architecto vitae molestiae quam. Amet, dolorem. Eaque similique sunt tempora eum et ducimus beatae hic sapiente. Nostrum iure consectetur incidunt repudiandae voluptas error quidem veritatis, corrupti ipsam vel officia, quasi consequatur consequuntur impedit dolorem praesentium, ut possimus commodi accusamus. Facilis doloribus sunt ea architecto totam minima iste sint laboriosam blanditiis exercitationem incidunt libero vel, illo corporis velit assumenda? Hic quae id qui beatae eligendi. Qui porro pariatur cum fuga aspernatur sequi reprehenderit illo quaerat quam cumque officiis placeat ducimus consequatur corporis obcaecati ut vel, quas temporibus. Fugit recusandae sit, unde numquam ullam enim ipsum eius voluptas in, ipsam voluptatum inventore autem porro nesciunt quam quasi. Eligendi sapiente, consequatur repellendus quod impedit non iure modi labore ea sint possimus aut!</p>
+    <img src="../5pmBatch/images/about2.jpg" alt="" id="i1">
+    <img src="../5pmBatch/images/blog5.jpg" alt="" id="i2">
+    <script>
+
+        // let d = document;
+        // console.log(d);
+
+        // let image = document.getElementById("i1"); 
+        // querySelector() method
+
+        // image = document.querySelector("")
+        // image = document.getElementsByTagName("img")
+        // image.title = "This title is generated using JS"
+        // image[0].src = "../5pmBatch/images/websitelayout.jpg"
+        // console.log(image[0]);
+        // document.write("Hello there")
+        // console.log("Hello console")
+        // alert("Hello Alert function")
+        
+        let btn = document.getElementById("btn")
+        let image_change = document.getElementById("i1")
+
+        function change() {
+            btn.innerHTML = "Click again"
+            image_change.src = "../5pmBatch/images/websitelayout.jpg"
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "white"
+        }
+
+        btn.addEventListener("click", change)
+        btn.addEventListener("mouseleave", ()=>{
+            alert("Hi")
+        })
+
+        let para = document.createElement("p")
+        para.innerHTML = "THis paragrapaoareuhdvka oeurgvaerkfewusdh ia wufgiaursdg iaudfg aiwudfgia ugfiaweufg aiudfgaiweudfgaisuft 84wyu"
+
+        document.body.appendChild(para)
+    </script>
+</body>
+</html>
