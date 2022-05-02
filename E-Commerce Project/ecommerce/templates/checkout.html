@@ -1,0 +1,73 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-lg-6">
+        <div class="box-element" id="form-wrapper">
+            <form action="" id="form">
+                <div id="user-info">
+                    <div class="form-field">
+                        <input type="text" name="name" id="" required class="form-control" placeholder="Name ...">
+                    </div>
+                    <div class="form-field">
+                        <input type="email" name="email" id="" required class="form-control" placeholder="Email ...">
+                    </div>
+                </div>
+                <div id="shipping-info">
+                    <hr>
+                    <p>Shipping Information:</p>
+                    <hr>
+                    <div class="form-field">
+                        <input type="text" name="address" placeholder="Address ..." id="" class="form-control">
+                    </div>
+
+                    <div class="form-field">
+                        <input type="text" name="city" placeholder="City ..." id="" class="form-control">
+                    </div>
+
+                    <div class="form-field">
+                        <input type="text" name="state" placeholder="State ..." id="" class="form-control">
+                    </div>
+
+                    <div class="form-field">
+                        <input type="text" name="zipcode" placeholder="Zipcode..." id="" class="form-control">
+                    </div>
+
+                    <div class="form-field">
+                        <input type="text" name="country" placeholder="Country ..." id="" class="form-control">
+                    </div>
+                </div>
+                <hr>
+                <input type="submit" value="Continue" id="form-button" class="btn btn-success btn-block">
+            </form>
+        </div>
+
+    </div>
+    <div class="col-lg-6">
+        <div class="box-element">
+            <a href="{% url 'cart' %}" class="btn btn-outline-dark">&#x2190; Back to cart</a>
+            <hr>
+            <h3>Order Summary</h3>
+            <hr>
+            {% for item in all_items %}
+            <div class="cart-row">
+                <div style="flex:2"><img class="row-image" src="{{ item.product.imageURL }}"></div>
+                <div style="flex:2">
+                    <p>{{ item.product.name }}</p>
+                </div>
+                <div style="flex:1">
+                    <p>Rs. {{ item.product.price|floatformat:2 }}</p>
+                </div>
+                <div style="flex:1">
+                    <p>x{{ item.quantity }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <h5>Items: {{ order_key.get_cart_items }}</h5>
+            <h5>Total: Rs. {{ order_key.get_cart_total|floatformat:2 }}</h5>
+        </div>
+    </div>
+
+</div>
+</div>
+{% endblock content %}
