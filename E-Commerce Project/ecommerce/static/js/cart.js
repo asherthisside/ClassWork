@@ -20,7 +20,7 @@ for(let i = 0; i < updateBtns.length; i++) {
 
 function updateUserOrder(productId, action) {
     console.log("Product Added", productId, action);
-    var url = '/process_order/'
+    var url = '/update_cart/'
     
     fetch(url, {
         method: 'POST',
@@ -37,5 +37,6 @@ function updateUserOrder(productId, action) {
 
     .then((data) => {
         console.log('data:', data);
+        location.reload()
     })
 }
