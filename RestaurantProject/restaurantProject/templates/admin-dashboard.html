@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-3">
+            <a href="{% url 'customers' %}"><button class="btn btn-primary">Customers</button></a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'products' %}"><button class="btn btn-primary">Products</button></a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'categories' %}"><button class="btn btn-primary">Categories</button></a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'orders' %}"><button class="btn btn-primary">Orders</button></a>
+        </div>
+    </div>
+{% endblock %}

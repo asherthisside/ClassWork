@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% block content %}
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Delivery charge</th>
+        <th>Estimated time to Prepare</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for category in categories %}
+        <tr>
+            <td>{{ category.id }}</td>
+            <td>{{ category.c_name }}</td>
+            <td>{{ category.delivery_charge }}</td>
+            <td>{{ category.time_to_prepare }}</td>
+            <td>
+                <button class="btn btn-sm btn-warning">Update</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1 class="text-center display-4">Enter the details here ... </h1>
+<form action="" method="post" class="form-group">
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Username: </label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="username" placeholder="Username ... ">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Password: </label>
+        <input type="text" class="form-control" id="formGroupExampleInput2"  name="password" placeholder="Password ... ">
+    </div>
+    <div class="mb-3">
+        <input type="submit" value="Login" class="btn btn-success">
+        <span>Not a user? <a href="">Sign Up</a> here</span>
+    </div>
+</form>
+{% endblock content %}
