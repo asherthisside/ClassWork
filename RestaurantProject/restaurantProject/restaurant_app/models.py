@@ -26,7 +26,7 @@ class Product(models.Model):
     p_name = models.CharField(max_length=60)
     price = models.FloatField()
     description = models.TextField()
-    # Image 
+    image = models.ImageField(null=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):

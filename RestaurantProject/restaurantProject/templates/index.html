@@ -1,1 +1,24 @@
 {% extends 'main.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4 col-sm-6">
+            <div class="card" style="width: 18rem;">
+              <span class="my-2 d-inline-block badge rounded-pill bg-danger text-bg-danger">{{ product.category }}</span>
+                <img src="{{ product.image.url }}" class="card-img-top" alt="..." height="100%" width="100%">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.p_name }}</h5>
+                  <p class="card-text">{{ product.description | truncatewords:10 }}</p>
+                  <h4 class="">Rs. {{ product.price }}</h4>
+                  <a href="#" class="btn btn-primary">Add to Cart</a>
+                  <a href="product/{{ product.id }}" class="btn btn-outline-success">View Product</a>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

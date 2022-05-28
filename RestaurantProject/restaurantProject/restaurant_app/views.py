@@ -1,10 +1,17 @@
+from itertools import product
 from django.shortcuts import render, redirect
 from .models import *
 from .forms import SignUpForm
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    prods = Product.objects.all()
+    return render(request, 'index.html', {'products' : prods})
+
+def view_product(request, pk):
+    prod = Product.objects.get(id=pk)
+    return render(request, 'view-product.html', {'product' : prod})
+
 
 def login(request):
     if request.method == 'POST':
